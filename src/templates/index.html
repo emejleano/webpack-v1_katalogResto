@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klasik Resto</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Klasik Resto</h1>
+        <a href="#main-content" class="skip-link">Skip to Content</a>
+        <!-- Hamburger Button untuk navigasi mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <!-- Navigasi -->
+        <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+            <a href="/">Home</a>
+            <a href="#favorites">Favorit</a>
+            <a href="https://github.com/emejleano" target="_blank" rel="noopener noreferrer">Tentang Kami</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Selamat Datang di Klasik Resto</h2>
+            <p>Cita Rasa Boleh diadu</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main id="main-content">
+        <section id="explore" class="content">
+            <h2 class="headline-title">Explor Restaurant</h2>
+            <div class="post">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Klasik Resto.</p>
+        <address>
+            <a href="https://github.com/emejleano">emejleano.com</a>
+        </address>
+    </footer>
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
