@@ -11,8 +11,12 @@ ol {
 }
 a {
   text-decoration: none;
+  display: inline-block; /* Agar height dan width dapat diterapkan */
+  min-width: 44px; /* Menambahkan touch dimension */
+  min-height: 44px; /* Menambahkan touch dimension */
 }
 
+/* Body Styling */
 body {
   background-color: #e2e0df;
   overflow-x: hidden;
@@ -20,25 +24,24 @@ body {
   height: 100%;
 }
 
-/* Skip Link */
 .skip-link {
   position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fcf0f0;
-  color: #131212;
-  padding: 10px 16px;
+  top: -40px; /* Sembunyikan elemen di luar layar */
+  left: 2%;
+  
+  background-color: #000;
+  color: #fff;
+  padding: 10px 15px;
   text-decoration: none;
-  z-index: 1000;
   border-radius: 5px;
+  z-index: 100;
   transition: top 0.3s ease;
 }
-@media (max-width: 768px) {
-  .skip-link {
-    top: 65%;
-  }
+
+.skip-link:focus {
+  top: 70px; /* Tampilkan elemen saat fokus */
 }
+
 
 /* Styling untuk Hamburger Button */
 .hamburger {
@@ -46,8 +49,8 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 44px; /* Touch dimension */
+  height: 44px; /* Touch dimension */
   background: transparent;
   border: none;
   cursor: pointer;
@@ -171,7 +174,7 @@ header {
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;  /* Menambahkan posisi relative agar z-index bisa bekerja */
+  position: relative; /* Menambahkan posisi relative agar z-index bisa bekerja */
   z-index: 2; /* Menampilkan testimonial di atas konten lainnya */
   margin-bottom: 40px;
 }
