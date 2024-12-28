@@ -12,7 +12,7 @@ dataRestorant.restaurants.forEach((dataRest) => {
       <img src="${dataRest.pictureId}" alt="Restoran ${dataRest.name}" />
       <div class="post-item-description">
         <h2>${dataRest.name}</h2>
-        <h4>Kota: ${dataRest.city} | Rating: ${dataRest.rating}</h4>
+        <h4>Kota: ${dataRest.city} | Rating: ⭐${dataRest.rating}</h4>
         <p>${dataRest.description}</p>
       </div>
     </article>
