@@ -1,4 +1,4 @@
-/*Reset*/
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -20,8 +20,7 @@ body {
   height: 100%;
 }
 
-
-
+/* Skip Link */
 .skip-link {
   position: absolute;
   top: 65%;
@@ -37,13 +36,13 @@ body {
 }
 @media (max-width: 768px) {
   .skip-link {
-    top: 65%; /* Sesuaikan posisi pada perangkat dengan layar lebih kecil */
+    top: 65%;
   }
 }
 
 /* Styling untuk Hamburger Button */
 .hamburger {
-  display: none; /* Tersembunyi di desktop */
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -62,7 +61,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Menyembunyikan nav-links di layar kecil */
   .nav-links {
     display: none;
     width: 100%;
@@ -76,7 +74,6 @@ body {
     border-bottom: 1px solid #444;
   }
 
-  /* Menampilkan hamburger button */
   .hamburger {
     display: flex;
   }
@@ -87,7 +84,7 @@ body {
   display: flex;
 }
 
-/* Styling untuk header */
+/* Styling untuk Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -105,7 +102,7 @@ header {
   text-decoration: underline;
 }
 
-/* Styling untuk hero section */
+/* Styling untuk Hero Section */
 .hero {
   background-image: url('/src/public/images/heros/hero-image_4.jpg');
   background-size: cover;
@@ -124,7 +121,7 @@ header {
   font-size: 1.5em;
 }
 
-/* Styling untuk konten utama */
+/* Styling untuk Konten Utama */
 .content {
   padding: 20px;
 }
@@ -136,6 +133,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  z-index: 1; /* Pastikan grid berada di bawah testimonial */
 }
 .post-item {
   border: 1px solid #ddd;
@@ -166,7 +164,44 @@ header {
   color: #666;
 }
 
-/* Styling untuk footer */
+/* Styling untuk Testimonial Section */
+#testimonials {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;  /* Menambahkan posisi relative agar z-index bisa bekerja */
+  z-index: 2; /* Menampilkan testimonial di atas konten lainnya */
+  margin-bottom: 40px;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.customer-name {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.rating span {
+  color: gold;
+  font-size: 18px;
+}
+
+/* Styling untuk Footer */
 footer {
   text-align: center;
   padding: 15px;
@@ -178,10 +213,66 @@ footer {
 /* Responsiveness */
 @media (max-width: 600px) {
   .hero-content h1 {
-      font-size: 2em;
+    font-size: 2em;
   }
   .hero-content p {
-      font-size: 1.2em;
+    font-size: 1.2em;
   }
 }
 
+/* Responsivitas untuk Testimonial */
+@media (max-width: 768px) {
+  #testimonials {
+    margin-top: 20px;
+  }
+
+  .testimonial {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #testimonials {
+    padding: 15px;
+  }
+
+  .testimonial {
+    padding: 15px;
+  }
+}
+
+/* Styling untuk Menu Section */
+#menu {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu-item h4 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}

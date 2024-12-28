@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Klasik Resto</title>
     <link rel="stylesheet" href="/src/styles/main.css">
 </head>
+
 <body>
     <!-- Header Section -->
     <header>
@@ -37,10 +39,60 @@
     <main id="main-content">
         <section id="explore" class="content">
             <h2 class="headline-title">Explor Restaurant</h2>
-            <div class="post">
-            </div>
+            <div class="post"></div>
         </section>
     </main>
+     <!-- Pilihan Menu Section -->
+     <section id="menu">
+        <h3>Menu Kami</h3>
+        <br>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/736x/6a/88/32/6a8832d29a911b320f9c68af86f8e134.jpg" alt="Pizza">
+                <h4>Pizza</h4>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/d5/d4/bb/d5d4bb7e8a83e3cc20f3383e4ca3e5c7.jpg" alt="Burger">
+                <h4>Burger</h4>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/474x/b1/21/41/b121419a4f6e16be30b58364b1b5681c.jpg" alt="Sushi">
+                <h4>Sushi</h4>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/236x/72/d9/af/72d9af964d384fc2a16fd087c1062a7c.jpg" alt="Salad">
+                <h4>Salad</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h3>Testimoni Pelanggan</h3>
+        <br>
+        <div class="testimonial">
+            <p>"Makanan yang lezat dan pelayanan yang sangat ramah! Pasti kembali lagi!"</p>
+            <span class="customer-name">- Ini Agus</span>
+            <div class="rating">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span> <!-- Setengah bintang -->
+            </div>
+        </div>
+        <div class="testimonial">
+            <p>"Tempat yang nyaman dan suasana yang tenang, sangat cocok untuk bersantai dengan keluarga."</p>
+            <span class="customer-name">- Mister Agus</span>
+            <div class="rating">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span> <!-- Lima bintang penuh -->
+            </div>
+        </div>
+    </section>
 
     <!-- Footer Section -->
     <footer>
@@ -51,10 +103,11 @@
     </footer>
 
     <script>
-        document.getElementById('hamburger').addEventListener('click', function() {
+        document.getElementById('hamburger').addEventListener('click', function () {
             const navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('active');
         });
     </script>
 </body>
+
 </html>
